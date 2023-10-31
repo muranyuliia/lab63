@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 void swapElements(int arr[], int n, int index = 0) {
     if (index >= n - 1) {
@@ -17,24 +18,24 @@ void swapElements(int arr[], int n, int index = 0) {
 int main() {
     int n;
 
-    std::cout << "Розмір масиву: ";
-    std::cin >> n;
+    cout << "size: ";
+    cin >> n;
 
     int* arr = new int[n];
 
-    std::cout << "Введіть елементи масиву: ";
+    cout << "elementy: ";
     for (int i = 0; i < n; i++) {
-        std::cin >> arr[i];
+        cin >> arr[i];
     }
 
     // Виклик рекурсивної функції для обміну елементів масиву.
     swapElements(arr, n);
 
-    std::cout << "Модифікований масив: ";
+    cout << "result: ";
     for (int i = 0; i < n; i++) {
         std::cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     delete[] arr;
 
